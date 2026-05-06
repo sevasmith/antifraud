@@ -15,8 +15,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --open",
-    "build": "webpack build",
+    "dev": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
@@ -30,6 +30,7 @@
     "@babel/preset-env": "^7.29.3",
     "@babel/preset-react": "^7.28.5",
     "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
@@ -38,6 +39,9 @@
     "globals": "^17.6.0",
     "html-webpack-plugin": "^5.6.7",
     "prettier": "^3.8.3",
+    "sass": "^1.99.0",
+    "sass-loader": "^16.0.7",
+    "style-loader": "^4.0.0",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3"
