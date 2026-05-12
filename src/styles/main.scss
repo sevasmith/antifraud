@@ -1,0 +1,7 @@
+@use './base/reset';
+@use './abstracts/variables';
+
+body {
+  font-family: variables.$font-primary;
+  background-color: variables.$color-background;
+}
