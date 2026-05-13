@@ -5,8 +5,13 @@
   align-items: center;
   justify-content: space-between;
 
+  .logo {
+    cursor: pointer;
+  }
+
   .header-nav {
     display: flex;
     gap: 0.25rem;
+    cursor: pointer;
   }
 }

@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 import { RouterProvider } from 'react-router';
-import { router } from './app/router';
+import { router } from './app/router/router';
 import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { store } from './app/store/store';
 import './styles/main.scss';
 
 const rootElement = document.getElementById('root');

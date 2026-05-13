@@ -2,6 +2,11 @@
 @use './abstracts/variables';
 
 body {
+  height: 100vh;
   font-family: variables.$font-primary;
-  background-color: variables.$color-background;
+  background-color: variables.$color-background-primary;
+}
+
+#root {
+  height: 100%;
 }

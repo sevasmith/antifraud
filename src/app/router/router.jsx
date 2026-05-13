@@ -1,10 +1,10 @@
 import { createBrowserRouter, Navigate } from 'react-router';
-import { Transactions } from '../pages/Transactions';
-import { Reports } from '../pages/Reports';
-import { App } from './app';
-import { Dashboard } from '../pages/Dashboard';
-import { Register } from '../pages/Register/Register';
-import { Login } from '../pages/Login/Login';
+import { Transactions } from '../../pages/Transactions';
+import { Reports } from '../../pages/Reports';
+import { App } from '../ui/App';
+import { Dashboard } from '../../pages/Dashboard/Dashboard';
+import { Register } from '../../pages/Register/Register';
+import { Login } from '../../pages/Login/Login';
 
 export const router = createBrowserRouter([
   {
