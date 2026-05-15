@@ -1,0 +1,37 @@
+@use '../../../styles/abstracts/variables';
+
+.tabs-nav {
+  width: 100%;
+  padding-top: 1.5rem;
+  background-color: variables.$color-background-secondary;
+}
+
+.tabs-list {
+  flex: 1;
+  display: flex;
+  list-style: none;
+}
+
+.tab-item {
+  flex: 1;
+}
+
+.tab-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid variables.$color-border-dark;
+  color: variables.$color-text-newtral;
+  transition: all 0.2s ease-in-out;
+
+  &.active {
+    background-color: variables.$color-background-primary;
+    color: variables.$color-text-primary;
+    border: 1px solid variables.$color-border-dark;
+    border-bottom: 1px solid transparent;
+  }
+}
