@@ -1,0 +1,62 @@
+@use '../../../styles/abstracts/variables';
+
+.box {
+  padding: 3rem 0;
+  background-color: variables.$color-background-primary;
+  border: 1px solid variables.$color-border-neutral;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .box-content {
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .box-icon {
+      height: 2.25rem;
+      align-self: flex-start;
+    }
+
+    .donut-wrapper {
+      margin-top: 3rem;
+      margin-right: 4rem;
+      position: relative;
+
+      .donut-data {
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .box-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .box-data {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .chart-box-label {
+    align-self: center;
+  }
+
+  .box-button {
+    margin: 3.4rem 4rem 0;
+    padding: 0.75rem 0;
+    font-size: 0.875rem;
+    justify-self: end;
+    color: variables.$color-text-primary;
+    background-color: variables.$color-background-primary;
+    border: 1px solid variables.$color-border-highlight;
+    border-radius: 2px;
+  }
+}

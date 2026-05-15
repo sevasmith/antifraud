@@ -1,7 +1,17 @@
+:root {
+  --color-primary: #1c7fda;
+  --color-approved: #45D700;
+  --color-declined: #FF5858;
+}
+
 $color-background-primary: #ffffff;
+$color-background-secondary: #e9eff2;
 $color-text-dark: #000000;
 $color-text-light: #ffffff;
-$color-primary: #1c7fda;
+$color-text-primary: #4e80d1;
+$color-border-neutral: #e3e4e5;
+$color-border-highlight: #86b4e1;
+$color-primary: var(--color-primary);
 $color-secondary: #9bc1ff;
 $color-error: #ff0000;
 $font-primary:

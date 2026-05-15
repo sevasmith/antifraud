@@ -7,9 +7,9 @@ export const App = () => {
   return (
     <div className="app-container">
       <Header />
-      <main className='main-container'>
+      <main className="main-container">
         <Sidebar />
-        <Outlet />
+        <Outlet className="outlet-container" />
       </main>
     </div>
   );

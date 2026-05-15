@@ -7,19 +7,30 @@ import settingsIcon from '../../assets/icons/settings.svg';
 import './Sidebar.scss';
 
 const SIDEBAR_ITEMS = [
-  { id: 1, label: 'Dashboard', icon: dashboardIcon, link:'/dashboard' },
-  { id: 2, label: 'Reports', icon: reportsIcon, hasDropdown: true, link:'/reports' },
-  { id: 3, label: 'Transactions', icon: transactionsIcon, hasDropdown: true, link:'/transactions' },
+  { id: 1, label: 'Dashboard', icon: dashboardIcon, link: '/dashboard' },
+  {
+    id: 2,
+    label: 'Reports',
+    icon: reportsIcon,
+    hasDropdown: true,
+    link: '/reports',
+  },
+  {
+    id: 3,
+    label: 'Transactions',
+    icon: transactionsIcon,
+    hasDropdown: true,
+    link: '/transactions',
+  },
   { id: 4, label: 'Help', icon: helpIcon },
   { id: 5, label: 'Settings', icon: settingsIcon },
 ];
 
 export const Sidebar = () => {
-
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <p className="sidebar-title">Fraud Management</p>
-      <div className="sidebar-nav">
+      <nav className="sidebar-nav">
         {SIDEBAR_ITEMS.map((item) => (
           <SidebarItem
             key={item.id}
@@ -29,7 +40,7 @@ export const Sidebar = () => {
             link={item.link}
           />
         ))}
-      </div>
-    </div>
+      </nav>
+    </aside>
   );
 };

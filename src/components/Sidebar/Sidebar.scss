@@ -1,10 +1,10 @@
 @use '../../styles/abstracts/variables';
 
 .sidebar {
-  height: 100%;
   width: 14rem;
   padding: 2rem 1.5rem;
   background-color: variables.$color-primary;
+  flex-shrink: 0;
 
   .sidebar-title {
     padding-bottom: 1.5rem;

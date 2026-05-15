@@ -8,7 +8,7 @@ export const Header = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
 
   return (
-    <div className="header">
+    <header className="header">
       <img src={logoIcon} alt="Antifraud Logo" className="logo" />
       <div className="header-nav">
         <img src={socialIcon} alt="Social icon" />
@@ -19,6 +19,6 @@ export const Header = () => {
         </p>
         <img src={listIcon} alt="Navigation icon" />
       </div>
-    </div>
+    </header>
   );
 };
