@@ -1,0 +1,26 @@
+@use '../../styles/abstracts/variables';
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: variables.$color-background-secondary;
+
+  .dashboard-title {
+    color: variables.$color-text-primary;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+  }
+
+  .dashboard-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use '../../../styles/abstracts/variables';
+
+.first-box {
+  padding: 3rem;
+  background-color: variables.$color-background-primary;
+  border: 1px solid variables.$color-border-neutral;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  grid-row: span 2;
+  gap: 6.75rem;
+
+  .first-box-title {
+    align-self: center;
+  }
+
+  .first-box-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+
+    .first-box-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .first-box-data {
+        font-size: 3rem;
+      }
+
+      .chart-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.375rem;
+
+          &::before {
+            content: '';
+            margin-right: 0.375rem;
+            display: inline-block;
+            height: 0.55rem;
+            width: 0.55rem;
+            border-radius: 50%;
+            background-color: var(--dot-color);
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}
