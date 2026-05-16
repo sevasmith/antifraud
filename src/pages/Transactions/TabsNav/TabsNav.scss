@@ -26,7 +26,6 @@
   border: none;
   border-bottom: 1px solid variables.$color-border-dark;
   color: variables.$color-text-newtral;
-  transition: all 0.2s ease-in-out;
 
   &.active {
     background-color: variables.$color-background-primary;

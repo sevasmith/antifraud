@@ -1,0 +1,117 @@
+@use '../../../styles/abstracts/variables';
+
+.customer-controls {
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$color-background-light;
+}
+
+.search-section {
+  flex: 1;
+  max-width: 15rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: variables.$color-text-newtral;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border: 1px solid variables.$color-border-dark;
+    border-radius: 2px;
+
+    &::placeholder {
+      color: variables.$color-text-newtral-light;
+      opacity: 1;
+    }
+  }
+}
+
+.balance-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance-title {
+  color: variables.$color-text-newtral-light;
+  margin-bottom: 0.5rem;
+}
+
+.balance-inputs {
+  padding-top: 0.5rem;
+  border-top: 1px solid variables.$color-border-neutral;
+  display: flex;
+  gap: 1rem;
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    label {
+      font-weight: 400;
+      color: variables.$color-text-dark;
+    }
+
+    input {
+      width: 10rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid variables.$color-border-dark;
+      border-radius: 2px;
+      text-align: right;
+    }
+  }
+}
+
+.actions-section {
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actions-btn {
+  width: 8.75rem;
+  height: fit-content;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background-color: variables.$color-primary;
+  color: variables.$color-text-light;
+  border: 1px solid transparent;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn-outline {
+  background-color: variables.$color-background-primary;
+  color: variables.$color-text-primary;
+  border: 1px solid variables.$color-border-highlight;
+
+  &:hover {
+    background-color: variables.$color-background-highlight;
+  }
+}

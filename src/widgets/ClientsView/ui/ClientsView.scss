@@ -1,0 +1,16 @@
+@use '../../../styles/abstracts/variables';
+
+.clients-widget-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .customer-profile-title {
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: variables.$color-text-primary;
+  }
+}

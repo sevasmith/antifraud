@@ -1,7 +1,7 @@
-import React from 'react'
+import { ClientsView } from '../../../widgets/ClientsView/ui/ClientsView'
 
 export const Clients = () => {
   return (
-    <div>Clients</div>
+    <ClientsView />
   )
 }
