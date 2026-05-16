@@ -1,6 +1,3 @@
-
 export const Withdraw = () => {
-  return (
-    <div>Withdraw</div>
-  )
-}
+  return <div></div>;
+};

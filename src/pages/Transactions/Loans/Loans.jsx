@@ -1,6 +1,3 @@
-
 export const Loans = () => {
-  return (
-    <div>Loans</div>
-  )
-}
+  return <div></div>;
+};

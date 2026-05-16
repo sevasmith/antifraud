@@ -1,5 +1,3 @@
 export const TransactionHistory = () => {
-  return (
-    <div>TransactionHistory</div>
-  )
-}
+  return <div></div>;
+};

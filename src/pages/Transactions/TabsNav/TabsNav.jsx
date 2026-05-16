@@ -10,13 +10,17 @@ const TABS = [
 ];
 
 export const TabsNav = () => {
-
   return (
     <nav className="tabs-nav">
       <ul className="tabs-list">
         {TABS.map((tab) => (
           <li key={tab.label} className="tab-item">
-            <NavLink to={tab.path} className={({isActive}) => `tab-button ${isActive ? 'active' : ''}`}>
+            <NavLink
+              to={tab.path}
+              className={({ isActive }) =>
+                `tab-button ${isActive ? 'active' : ''}`
+              }
+            >
               {tab.label}
             </NavLink>
           </li>

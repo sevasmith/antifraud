@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
             path: 'history',
             element: <TransactionHistory />,
           },
-        ]
+        ],
       },
     ],
   },
