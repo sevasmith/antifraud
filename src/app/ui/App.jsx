@@ -9,7 +9,7 @@ export const App = () => {
       <Header />
       <main className="main-container">
         <Sidebar />
-        <Outlet className="outlet-container" />
+        <Outlet />
       </main>
     </div>
   );

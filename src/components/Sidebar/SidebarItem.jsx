@@ -7,7 +7,7 @@ export const SidebarItem = ({ label, icon, hasDropdown, link }) => {
       <div className="icon-container">
         <img src={icon} alt={`${label} Icon`} />
       </div>
-      <p className='sidebar-label'>{label}</p>
+      <p className="sidebar-label">{label}</p>
       {hasDropdown && (
         <div className="list-icon-container">
           <img src={listEmptyIcon} alt="List Icon" />
