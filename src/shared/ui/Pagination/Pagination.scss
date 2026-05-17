@@ -1,0 +1,70 @@
+@use '../../../styles/abstracts/variables';
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0.5rem;
+  border-top: 1px solid variables.$color-border-dark;
+  font-size: 0.875rem;
+}
+
+.pagination-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:hover:not(.ellipsis) {
+    color: variables.$color-primary;
+  }
+
+  &.active {
+    color: variables.$color-primary;
+  }
+
+  &.ellipsis {
+    color: variables.$color-text-dark;
+    cursor: default;
+  }
+}
+
+.pagination-settings {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.stats-text {
+  color: variables.$color-text-neutral-soft;
+}
+
+.limit-selector select {
+  background-color: variables.$color-background-light;
+  border: none;
+  padding: 0.75rem 5.75rem 0.75rem 1rem;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+
+  appearance: none;
+  background-image: url('../../../assets/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}

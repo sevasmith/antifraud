@@ -1,0 +1,63 @@
+@use '../../../styles/abstracts/variables';
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: variables.$color-background-primary;
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+
+  .table-head {
+    font-size: 0.75rem;
+  }
+
+  th {
+    position: relative;
+    font-weight: 400;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+    }
+
+    &:hover {
+      background-color: variables.$color-background-highlight;
+    }
+
+    .sort-icon {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.enabled {
+        color: variables.$color-primary;
+      }
+    }
+  }
+
+  td {
+    white-space: nowrap;
+    font-weight: 400;
+    padding: 0.875rem 1rem;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: variables.$color-background-light;
+  }
+
+  tbody tr:hover {
+    background-color: variables.$color-background-highlight;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+}
