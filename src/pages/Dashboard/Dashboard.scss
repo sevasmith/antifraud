@@ -18,8 +18,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
+    overflow-y: auto;
 
-    @media (max-width: 1200px) {
+    @media (max-width: variables.$breakpoint-desktop) {
       grid-template-columns: repeat(2, 1fr);
     }
   }

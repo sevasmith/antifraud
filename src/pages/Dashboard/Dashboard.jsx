@@ -1,5 +1,5 @@
 import { DashboardBox } from './DashboardBox/DashboardBox';
-import transactionsIcon from '../../assets/icons/transactions.svg';
+import arrowsIcon from '../../assets/icons/arrows.svg';
 import pendingIcon from '../../assets/icons/pending.svg';
 import rateIcon from '../../assets/icons/rate.svg';
 import rejectedIcon from '../../assets/icons/rejected.svg';
@@ -39,7 +39,7 @@ const approvedChart = {
 };
 
 const DASHBOARD_BOXES = [
-  { id: 1, icon: transactionsIcon, data: '12 112', label: 'All transactions' },
+  { id: 1, icon: arrowsIcon, data: '12 112', label: 'All transactions' },
   { id: 2, icon: rateIcon, data: '99.3%', label: 'Approval Rate' },
   { id: 3, icon: pendingIcon, data: '10', label: 'Pending Approval' },
   {

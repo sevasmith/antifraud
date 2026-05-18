@@ -21,6 +21,10 @@
       color: variables.$color-text-primary;
     }
   }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 0.5rem;
+  }
 }
 
 .alert-info {
