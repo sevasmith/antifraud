@@ -49,8 +49,14 @@ export const ReportDetails = ({alert}) => {
                     <div className="rd-card map-card">
                         <h3 className="card-title">ATM</h3>
                         <p className="address">{alert?.atmAddress}</p>
-                        <div className="map-placeholder">
-                            <p>Map</p>
+                        <div className="map-container">
+                            <iframe
+                                title="ATM Location"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                loading="lazy"
+                                src={`https://maps.google.com/maps?q=${encodeURIComponent(alert?.atmAddress)}&t=&z=14&ie=UTF8&iwloc=near&output=embed`}                            ></iframe>
                         </div>
                     </div>
                 </div>
