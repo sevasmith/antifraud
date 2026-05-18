@@ -41,10 +41,7 @@ export const dummyApi = createApi({
         return endpointName;
       },
 
-      merge: (currentCache, newItems, { arg }) => {
-        if (arg.skip === 0) {
-          return newItems;
-        }
+      merge: (currentCache, newItems) => {
         currentCache.push(...newItems);
       },
 

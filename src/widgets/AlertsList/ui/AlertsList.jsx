@@ -16,11 +16,9 @@ export const AlertsList = () => {
   }, [alerts, activeAlertId]);
 
   const handleScroll = (e) => {
-    console.log(1);
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
 
     if (scrollHeight - Math.ceil(scrollTop) <= clientHeight + 1 && !isFetching) {
-      console.log(1);
       
       setSkip((prevSkip) => prevSkip + 15);
     }

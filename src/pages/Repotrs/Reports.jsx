@@ -1,4 +1,5 @@
 import { AlertsList } from '../../widgets/AlertsList/ui/AlertsList';
+import { ReportDetails } from '../../widgets/ReportDetails/ui/ReportDetails';
 import './Reports.scss';
 
 export const Reports = () => {
@@ -15,7 +16,7 @@ export const Reports = () => {
         </div>
 
         <div className="reports-detail-container">
-          <p>Details</p>
+          <ReportDetails />
         </div>
       </div>
     </div>
