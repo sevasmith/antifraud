@@ -30,6 +30,11 @@ $color-approved: var(--color-approved);
 $color-approved-dark: #4CAF50;
 $color-declined: var(--color-declined);
 $color-declined-dark: #EB5E53;
+
+
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
 $font-primary:
   DM Sans,
   sans-serif;

@@ -23,7 +23,13 @@
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background-color: variables.$color-background-secondary;
-  overflow: hidden;
+  overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
   .reports-header {
     padding: 1rem 0.5rem;
@@ -33,12 +39,6 @@
 
   .reports-detail-container {
     height: 100%;
-    overflow-y: auto;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    
   }
 }

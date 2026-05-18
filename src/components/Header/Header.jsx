@@ -4,11 +4,12 @@ import listIcon from '../../assets/icons/list-filled.svg';
 import { useSelector } from 'react-redux';
 import './Header.scss';
 
-export const Header = () => {
+export const Header = ({onMenuClick}) => {
   const currentUser = useSelector((state) => state.user.currentUser);
 
   return (
     <header className="header">
+      <button className="mobile-menu-btn" onClick={onMenuClick}> ☰ </button>
       <img src={logoIcon} alt="Antifraud Logo" className="logo" />
       <div className="header-nav">
         <img src={socialIcon} alt="Social icon" />

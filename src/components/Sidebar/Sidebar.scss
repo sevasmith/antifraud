@@ -5,18 +5,48 @@
   padding: 2rem 1.5rem;
   background-color: variables.$color-primary;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 
   &.collapsed {
-    width: 4.2rem;
-    padding: 2rem 1rem;
-
-    .sidebar-nav .sidebar-item {
-      .sidebar-label,
-      .list-icon-container {
+    @media (min-width: variables.$breakpoint-tablet) {
+      width: 4.2rem;
+      padding: 2rem 1rem;
+      
+      .sidebar-title {
         display: none;
+      }
+      
+      .sidebar-nav .sidebar-item {
+        .sidebar-label,
+        .list-icon-container {
+          display: none;
+        }
       }
     }
   }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-100%);
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
 
 .sidebar-title {

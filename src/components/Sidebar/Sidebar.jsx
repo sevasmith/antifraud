@@ -27,24 +27,28 @@ const SIDEBAR_ITEMS = [
   { id: 5, label: 'Settings', icon: settingsIcon },
 ];
 
-export const Sidebar = () => {
+export const Sidebar = ({ isOpen, closeSidebar }) => {
   const location = useLocation();
   const isCollapsed = location.pathname.startsWith('/reports');
 
   return (
-    <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-      {!isCollapsed && <p className="sidebar-title">Fraud Management</p>}
-      <nav className="sidebar-nav">
-        {SIDEBAR_ITEMS.map((item) => (
-          <SidebarItem
-            key={item.id}
-            label={item.label}
-            icon={item.icon}
-            hasDropdown={item.hasDropdown}
-            link={item.link}
-          />
-        ))}
-      </nav>
-    </aside>
+    <>
+      {isOpen && <div className="sidebar-backdrop" onClick={closeSidebar}></div>}
+      <aside onClick={closeSidebar} className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
+        <p className="sidebar-title">Fraud Management</p>
+        <nav className="sidebar-nav">
+          {SIDEBAR_ITEMS.map((item) => (
+            <SidebarItem
+              key={item.id}
+              label={item.label}
+              icon={item.icon}
+              hasDropdown={item.hasDropdown}
+              link={item.link}
+            />
+          ))}
+        </nav>
+      </aside>
+    </>
+
   );
 };
