@@ -5,14 +5,16 @@ import { useState } from 'react';
 import './App.scss';
 
 export const App = () => {
-
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <div className="app-container">
       <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
       <main className="main-container">
-        <Sidebar isOpen={isSidebarOpen} closeSidebar={() => setIsSidebarOpen(false)} />
+        <Sidebar
+          isOpen={isSidebarOpen}
+          closeSidebar={() => setIsSidebarOpen(false)}
+        />
         <Outlet />
       </main>
     </div>

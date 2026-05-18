@@ -11,79 +11,78 @@
   cursor: pointer;
 
   &:hover:not(.active) {
-    background-color:  variables.$color-background-highlight;
+    background-color: variables.$color-background-highlight;
   }
 
   &.active {
     background-color: variables.$color-background-active;
 
-     .alert-name {
+    .alert-name {
       color: variables.$color-text-primary;
     }
   }
 }
 
 .alert-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 
-    .alert-name {
-      font-weight: 600;
-    }
-
-    .alert-transaction-id {
-      font-size: 0.875rem;
-      color: variables.$color-text-neutral-light;
-    }
-    .alert-date {
-      font-size: 0.875rem;
-      color: variables.$color-text-neutral-soft;
-    }
+  .alert-name {
+    font-weight: 600;
   }
 
-  .alert-transaction {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-end;
-    gap: 1rem;
-    padding-bottom: 0.5rem;
-
-    .badge {
-      background-color: variables.$color-background-neutral;
-      font-size: 0.75rem;
-      color: variables.$color-text-secondary;
-      padding: 0.125rem 0.25rem;
-      border-radius: 2px;
-    }
-
-    .alert-amount {
-      font-size: 1rem;
-      font-weight: 600;
-      color: variables.$color-text-neutral-soft;
-    }
+  .alert-transaction-id {
+    font-size: 0.875rem;
+    color: variables.$color-text-neutral-light;
   }
+  .alert-date {
+    font-size: 0.875rem;
+    color: variables.$color-text-neutral-soft;
+  }
+}
 
-  .alert-score {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 4rem;
-    font-size: 1rem;
-    color: variables.$color-text-light;
+.alert-transaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+
+  .badge {
+    background-color: variables.$color-background-neutral;
+    font-size: 0.75rem;
+    color: variables.$color-text-secondary;
+    padding: 0.125rem 0.25rem;
     border-radius: 2px;
-    flex-shrink: 0;
-
-    &.score-safe {
-      color: variables.$color-text-safe;
-      background-color: variables.$color-card-safe;
-    }
-
-    &.score-warning {
-      background-color: variables.$color-card-warning;
-    }
-
   }
+
+  .alert-amount {
+    font-size: 1rem;
+    font-weight: 600;
+    color: variables.$color-text-neutral-soft;
+  }
+}
+
+.alert-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 4rem;
+  font-size: 1rem;
+  color: variables.$color-text-light;
+  border-radius: 2px;
+  flex-shrink: 0;
+
+  &.score-safe {
+    color: variables.$color-text-safe;
+    background-color: variables.$color-card-safe;
+  }
+
+  &.score-warning {
+    background-color: variables.$color-card-warning;
+  }
+}

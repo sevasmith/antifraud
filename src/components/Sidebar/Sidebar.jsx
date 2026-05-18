@@ -33,8 +33,13 @@ export const Sidebar = ({ isOpen, closeSidebar }) => {
 
   return (
     <>
-      {isOpen && <div className="sidebar-backdrop" onClick={closeSidebar}></div>}
-      <aside onClick={closeSidebar} className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
+      {isOpen && (
+        <div className="sidebar-backdrop" onClick={closeSidebar}></div>
+      )}
+      <aside
+        onClick={closeSidebar}
+        className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}
+      >
         <p className="sidebar-title">Fraud Management</p>
         <nav className="sidebar-nav">
           {SIDEBAR_ITEMS.map((item) => (
@@ -49,6 +54,5 @@ export const Sidebar = ({ isOpen, closeSidebar }) => {
         </nav>
       </aside>
     </>
-
   );
 };
