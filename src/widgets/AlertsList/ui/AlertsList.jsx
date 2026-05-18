@@ -3,17 +3,16 @@ import './AlertsList.scss';
 import { AlertCard } from '../../../entities/alert/ui/AlertCard/AlertCard';
 import { useGetFraudAlertsQuery } from '../../../shared/api/dummyApi';
 
-export const AlertsList = () => {
+export const AlertsList = ({ activeAlert, setActiveAlert }) => {
   const [skip, setSkip] = useState(0);
-  const [activeAlertId, setActiveAlertId] = useState(0);
 
   const { data: alerts = [], isLoading, isFetching, isError } = useGetFraudAlertsQuery({ limit: 15, skip });
   
   useEffect(() => {
-    if (alerts.length > 0 && !activeAlertId) {
-      setActiveAlertId(alerts[0].id);
+    if (alerts.length > 0 && !activeAlert) {     
+      setActiveAlert(alerts[0]);
     }
-  }, [alerts, activeAlertId]);
+  }, [alerts, activeAlert]);
 
   const handleScroll = (e) => {
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
@@ -33,8 +32,8 @@ export const AlertsList = () => {
         <AlertCard
           key={alert.id}
           alert={alert}
-          isActive={activeAlertId === alert.id}
-          onClick={() => setActiveAlertId(alert.id)}
+          isActive={activeAlert === alert}
+          onClick={() => setActiveAlert(alert)}
         />
       ))}
     </aside>

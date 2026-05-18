@@ -34,6 +34,7 @@ export const dummyApi = createApi({
         return { customers: transformedREsponse, total: response.total };
       },
     }),
+
     getFraudAlerts: builder.query({
       query: ({ limit, skip }) => `/users?limit=${limit}&skip=${skip}`,
 
@@ -70,6 +71,20 @@ export const dummyApi = createApi({
               },
             ) + ' PST';
 
+          const cardNumber = user.bank?.cardNumber
+            ? `**** **** **** ${user.bank.cardNumber.slice(-4)}`
+            : '5237 55xx xxxx';
+
+          const bankName = user.company?.name
+            ? `${user.company.name.toUpperCase()} FINANCIAL`
+            : 'AMERICAN EXPRESS INT.';
+
+          const accountNumber = user.bank?.iban?.slice(0, 12) || '488723454555';
+          const lastOrderId = `871100${Math.floor(Math.random() * 90000) + 10000}`;
+          const atmAddress = user.address
+            ? `${user.address.address}, ${user.address.city}`
+            : '332 Patterson Street';
+
           return {
             id: user.id,
             fullName: `${user.firstName} ${user.lastName}`,
@@ -79,7 +94,15 @@ export const dummyApi = createApi({
             amount: `$${amount}`,
             riskScore,
             riskLevel,
-            rawUserData: user,
+            cardNumber,
+            bankName,
+            cvvResponse: 'CVV2 Match (M)',
+            avsResponse: 'Full Match (Y)',
+            accountNumber,
+            lastOrderId,
+            atmAddress,
+            phone: user.phone,
+            rawData: user,
           };
         });
       },

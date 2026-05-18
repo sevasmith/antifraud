@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import { AlertsList } from '../../widgets/AlertsList/ui/AlertsList';
 import { ReportDetails } from '../../widgets/ReportDetails/ui/ReportDetails';
 import './Reports.scss';
 
 export const Reports = () => {
+
+  const [activeAlert, setActiveAlert] = useState(null);
+
   return (
     <div className="reports-page">
 
       <div className="reports-sidebar">
-        <AlertsList />
+        <AlertsList activeAlert={activeAlert} setActiveAlert={setActiveAlert} />
       </div>
 
       <div className="reports-content">
@@ -16,7 +20,7 @@ export const Reports = () => {
         </div>
 
         <div className="reports-detail-container">
-          <ReportDetails />
+          <ReportDetails alert={activeAlert} />
         </div>
       </div>
     </div>
