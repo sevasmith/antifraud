@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 import { Transactions } from '../../pages/Transactions/Transactions';
-import { Reports } from '../../pages/Reports';
+import { Reports } from '../../pages/Repotrs/Reports';
 import { App } from '../ui/App';
 import { Dashboard } from '../../pages/Dashboard/Dashboard';
 import { Register } from '../../pages/Register/Register';

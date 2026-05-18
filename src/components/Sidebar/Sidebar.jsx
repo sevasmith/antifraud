@@ -5,6 +5,7 @@ import transactionsIcon from '../../assets/icons/transactions.svg';
 import helpIcon from '../../assets/icons/help.svg';
 import settingsIcon from '../../assets/icons/settings.svg';
 import './Sidebar.scss';
+import { useLocation } from 'react-router';
 
 const SIDEBAR_ITEMS = [
   { id: 1, label: 'Dashboard', icon: dashboardIcon, link: '/dashboard' },
@@ -27,9 +28,12 @@ const SIDEBAR_ITEMS = [
 ];
 
 export const Sidebar = () => {
+  const location = useLocation();
+  const isCollapsed = location.pathname.startsWith('/reports');
+
   return (
-    <aside className="sidebar">
-      <p className="sidebar-title">Fraud Management</p>
+    <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+      {!isCollapsed && <p className="sidebar-title">Fraud Management</p>}
       <nav className="sidebar-nav">
         {SIDEBAR_ITEMS.map((item) => (
           <SidebarItem

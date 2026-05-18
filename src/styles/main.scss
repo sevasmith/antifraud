@@ -1,13 +1,19 @@
 @use './base/reset';
 @use './abstracts/variables';
 
+html, body {
+  height: 100%;
+  overflow: hidden; 
+}
+
 body {
   font-family: variables.$font-primary;
   background-color: variables.$color-background-primary;
 }
 
 #root {
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
