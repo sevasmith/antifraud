@@ -20,12 +20,19 @@ export const Register = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    if (firstName.length < 2) {
-      setError('First name must be at least 2 characters');
+    const onlyLettersRegex = /^[a-zA-Z]+$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!onlyLettersRegex.test(firstName)) {
+      setError('First name must contain only letters');
       return;
     }
-    if (lastName.length < 2) {
-      setError('Last name must be at least 2 characters');
+    if (!onlyLettersRegex.test(lastName)) {
+      setError('Last name must contain only letters');
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address');
       return;
     }
     if (password.length < 8) {
