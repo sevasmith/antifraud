@@ -14,6 +14,10 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: fit-content;
+  }
 }
 
 .reports-content {
@@ -21,7 +25,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   background-color: variables.$color-background-secondary;
   overflow-y: auto;
 
@@ -32,12 +36,16 @@
   }
 
   .reports-header {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 0.5rem 1rem;
     color: variables.$color-text-primary;
     text-transform: uppercase;
   }
 
   .reports-detail-container {
-    height: 100%;
+    min-height: 100%;
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 0 0.5rem;
   }
 }
