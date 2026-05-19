@@ -1,5 +1,6 @@
 import path from 'node:path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,6 +16,10 @@ export default {
 
   devServer: {
     historyApiFallback: true,
+
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
   },
 
   module: {
@@ -46,7 +51,19 @@ export default {
     ],
   },
 
-  plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public/favicon.png',
+          to: 'favicon.png',
+        },
+      ],
+    }),
+  ],
 
   resolve: {
     extensions: ['.js', '.jsx'],
