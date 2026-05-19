@@ -19,7 +19,7 @@
   flex: 0 1 15rem;
 
   @media (max-width: variables.$breakpoint-desktop) {
-  flex: 0 1 auto;
+    flex: 0 1 auto;
   }
 }
 
@@ -41,10 +41,16 @@
     padding: 0.5rem 1rem 0.5rem 2.5rem;
     border: 1px solid variables.$color-border-dark;
     border-radius: 2px;
+    outline: none;
 
     &::placeholder {
       color: variables.$color-text-neutral-light;
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1.5px solid variables.$color-border-highlight;
     }
   }
 }
@@ -92,6 +98,12 @@
       border: 1px solid variables.$color-border-dark;
       border-radius: 2px;
       text-align: right;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        border: 1.5px solid variables.$color-border-highlight;
+      }
     }
   }
 }

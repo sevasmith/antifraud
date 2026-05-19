@@ -1,13 +1,13 @@
 import './CustomerControls.scss';
 import searchIcon from '../../../assets/icons/search.svg';
 
-export const CustomerControls = () => {
+export const CustomerControls = ({onSearch, searchTerm}) => {
   return (
     <div className="customer-controls">
       <div className="search-section">
         <div className="search-input-wrapper">
           <img src={searchIcon} alt="Search Icon" className="search-icon" />
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Full Name" value={searchTerm} onChange={(e) => onSearch(e.target.value)} />
         </div>
       </div>
 
@@ -16,11 +16,11 @@ export const CustomerControls = () => {
         <div className="balance-inputs">
           <div className="input-group">
             <label htmlFor="accId">Acc ID</label>
-            <input type="text" id="accId" defaultValue="8" />
+            <input type="text" id="accId" placeholder="8" />
           </div>
           <div className="input-group">
             <label htmlFor="accBalance">Acc Balance</label>
-            <input type="text" id="accBalance" defaultValue="$1,100.00" />
+            <input type="text" id="accBalance" placeholder="$1,100.00" />
           </div>
         </div>
       </div>
