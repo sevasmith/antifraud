@@ -10,6 +10,7 @@ import { Clients } from '../../pages/Transactions/Clients/Clients';
 import { Withdraw } from '../../pages/Transactions/Withdraw/Withdraw';
 import { Loans } from '../../pages/Transactions/Loans/Loans';
 import { TransactionHistory } from '../../pages/Transactions/Transaction History/TransactionHistory';
+import { ProtectedRoute } from '../../shared/ui/ProtectedRoute/ProtectedRoute';
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <App />,
+    element: (
+      <ProtectedRoute>
+        <App />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
