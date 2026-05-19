@@ -8,6 +8,7 @@ import './ClientsView.scss';
 export const ClientsView = () => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const [sortConfig, setSortConfig] = useState({ key: '', order: '' });
 
@@ -21,6 +22,7 @@ export const ClientsView = () => {
     limit,
     sortBy: sortConfig.key,
     order: sortConfig.order,
+    search: searchTerm
   });
 
   const { customers = [], total = 0 } = data;
@@ -44,6 +46,11 @@ export const ClientsView = () => {
     setPage(1);
   };
 
+  const handleSearch = (term) => {
+    setSearchTerm(term)
+    setPage(1)
+  }
+
   const handleLimitChange = (newLimit) => {
     setLimit(newLimit);
     setPage(1);
@@ -52,7 +59,7 @@ export const ClientsView = () => {
   return (
     <div className="clients-widget-container">
       <h2 className="customer-profile-title">Customer Profile</h2>
-      <CustomerControls />
+      <CustomerControls onSearch={handleSearch} searchTerm={searchTerm} />
 
       <div className="widget-pages-container">
         <div

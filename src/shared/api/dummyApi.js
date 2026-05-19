@@ -7,10 +7,16 @@ export const dummyApi = createApi({
 
   endpoints: (builder) => ({
     getCustomers: builder.query({
-      query: ({ page, limit, sortBy, order }) => {
+      query: ({ page, limit, sortBy, order, search}) => {
         const skip = (page - 1) * limit;
 
-        let url = `users?limit=${limit}&skip=${skip}`;
+        const basePath = search ? 'users/search' : 'users';
+
+        let url = `${basePath}?limit=${limit}&skip=${skip}`;
+
+        if (search) {
+          url += `&q=${search}`;
+        }
 
         if (sortBy && order) {
           url += `&sortBy=${sortBy}&order=${order}`;
