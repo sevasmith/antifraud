@@ -1,13 +1,18 @@
 import './CustomerControls.scss';
 import searchIcon from '../../../assets/icons/search.svg';
 
-export const CustomerControls = ({onSearch, searchTerm}) => {
+export const CustomerControls = ({ onSearch, searchTerm }) => {
   return (
     <div className="customer-controls">
       <div className="search-section">
         <div className="search-input-wrapper">
           <img src={searchIcon} alt="Search Icon" className="search-icon" />
-          <input type="text" placeholder="Full Name" value={searchTerm} onChange={(e) => onSearch(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={searchTerm}
+            onChange={(e) => onSearch(e.target.value)}
+          />
         </div>
       </div>
 

@@ -6,7 +6,7 @@ import { Dashboard } from '../../pages/Dashboard/Dashboard';
 import { Register } from '../../pages/Register/Register';
 import { Login } from '../../pages/Login/Login';
 import { Deposit } from '../../pages/Transactions/Deposit/Deposit';
-import { Clients } from '../../pages/Transactions/Clients/CLients';
+import { Clients } from '../../pages/Transactions/Clients/Clients';
 import { Withdraw } from '../../pages/Transactions/Withdraw/Withdraw';
 import { Loans } from '../../pages/Transactions/Loans/Loans';
 import { TransactionHistory } from '../../pages/Transactions/Transaction History/TransactionHistory';

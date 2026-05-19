@@ -58,7 +58,7 @@
 .stats-text {
   color: variables.$color-text-neutral-soft;
 
-   @media (max-width: variables.$breakpoint-mobile) {
+  @media (max-width: variables.$breakpoint-mobile) {
     display: none;
   }
 }
