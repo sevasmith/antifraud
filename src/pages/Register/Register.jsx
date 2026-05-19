@@ -2,8 +2,12 @@ import { useState } from 'react';
 import logoIcon from '../../assets/icons/logo.svg';
 import { useNavigate } from 'react-router';
 import './Register.scss';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../entities/user/model/userSlice';
 
 export const Register = () => {
+  const dispatch = useDispatch();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -42,6 +46,8 @@ export const Register = () => {
 
     localStorage.setItem('currentUser', JSON.stringify(newUser));
     localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+
+    dispatch(setUser(newUser));
 
     navigate('/dashboard');
   };

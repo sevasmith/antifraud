@@ -7,7 +7,7 @@ export const dummyApi = createApi({
 
   endpoints: (builder) => ({
     getCustomers: builder.query({
-      query: ({ page, limit, sortBy, order, search}) => {
+      query: ({ page, limit, sortBy, order, search }) => {
         const skip = (page - 1) * limit;
 
         const basePath = search ? 'users/search' : 'users';

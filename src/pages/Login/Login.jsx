@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import logoIcon from '../../assets/icons/logo.svg';
 import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../entities/user/model/userSlice';
 import './Login.scss';
 
 export const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -30,6 +33,7 @@ export const Login = () => {
     }
 
     localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    dispatch(setUser(currentUser));
     navigate('/dashboard');
   };
 

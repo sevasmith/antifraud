@@ -8,7 +8,7 @@ import './ClientsView.scss';
 export const ClientsView = () => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const [sortConfig, setSortConfig] = useState({ key: '', order: '' });
 
@@ -22,7 +22,7 @@ export const ClientsView = () => {
     limit,
     sortBy: sortConfig.key,
     order: sortConfig.order,
-    search: searchTerm
+    search: searchTerm,
   });
 
   const { customers = [], total = 0 } = data;
@@ -47,9 +47,9 @@ export const ClientsView = () => {
   };
 
   const handleSearch = (term) => {
-    setSearchTerm(term)
-    setPage(1)
-  }
+    setSearchTerm(term);
+    setPage(1);
+  };
 
   const handleLimitChange = (newLimit) => {
     setLimit(newLimit);

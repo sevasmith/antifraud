@@ -9,6 +9,7 @@ A high-performance, responsive Single Page Application (SPA) built for fraud ana
 ## 📖 Functionality
 
 The application provides a comprehensive toolkit for fraud management:
+
 - **Fraudulent Activity Reports:** A Master-Detail view with infinite scrolling to monitor incoming alerts, risk scores, and transaction metadata.
 - **Client Management:** A dynamic, sortable, and paginated table of customers integrated with the DummyJSON API.
 - **Interactive Map:** ATM location tracking using Google Maps integration for transaction verification.
@@ -20,14 +21,17 @@ The application provides a comprehensive toolkit for fraud management:
 ## 🛠️ Tech Stack
 
 ### Core
+
 - **React 19:** Functional components and hooks.
 - **React Router 7:** Declarative routing for Login, Reports, and Transactions views.
 
 ### State Management & API
+
 - **Redux Toolkit:** Global state management for UI states (sidebar, active alerts).
 - **RTK Query:** Data fetching, automated caching, and response transformation from the **DummyJSON API**.
 
 ### Build Tooling
+
 - **Webpack 5:** Custom configuration (no CRA) including:
   - `babel-loader` for JS/JSX.
   - `sass-loader`, `css-loader`, `style-loader`.
@@ -35,6 +39,7 @@ The application provides a comprehensive toolkit for fraud management:
   - `webpack-dev-server` for optimized development.
 
 ### Styling
+
 - **SASS (SCSS):** Structured using the **7-1 Pattern** (Variables, Mixins, Layouts).
 - **Native CSS Grid & Flexbox:** Used for all layouts.
 
@@ -43,6 +48,7 @@ The application provides a comprehensive toolkit for fraud management:
 ## 🏗️ Architecture
 
 The project follows the **Feature-Sliced Design (FSD)** architectural methodology:
+
 - `app/`: Global providers, styles, and store configuration.
 - `pages/`: Composition of widgets to form full views (Login, Reports, Transactions).
 - `widgets/`: Complex UI blocks (e.g., `AlertsList`, `ReportDetails`, `Sidebar`).
@@ -55,10 +61,12 @@ The project follows the **Feature-Sliced Design (FSD)** architectural methodolog
 ## 📦 Installation & Startup
 
 ### Prerequisites
+
 - Node.js (v16.x or higher)
 - npm or yarn
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/sevasmith/antifraud.git
 
@@ -82,7 +90,6 @@ npm run dev
 ```bash
 npm run build
 ```
-
 
 ## 👥 Contact
 
