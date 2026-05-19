@@ -25,6 +25,11 @@
   border: none;
   font-size: 0.875rem;
 
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   &:disabled {
     opacity: 0.5;
     cursor: default;
@@ -52,6 +57,10 @@
 
 .stats-text {
   color: variables.$color-text-neutral-soft;
+
+   @media (max-width: variables.$breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .limit-selector select {
@@ -67,4 +76,8 @@
   background-image: url('../../../assets/icons/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: right 1rem center;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding-right: 3rem;
+  }
 }

@@ -4,12 +4,16 @@
   width: 100%;
   padding-top: 1.5rem;
   background-color: variables.$color-background-secondary;
+  max-width: 100vw;
 }
 
 .tabs-list {
   flex: 1;
   display: flex;
   list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .tab-item {
