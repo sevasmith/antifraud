@@ -1,0 +1,96 @@
+@use '../../styles/abstracts/variables';
+
+.sidebar {
+  width: 14rem;
+  padding: 2rem 1.5rem;
+  background-color: variables.$color-primary;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+
+  &.collapsed {
+    @media (min-width: variables.$breakpoint-tablet) {
+      width: 4.2rem;
+      padding: 2rem 1rem;
+
+      .sidebar-title {
+        display: none;
+      }
+
+      .sidebar-nav .sidebar-item {
+        .sidebar-label,
+        .list-icon-container {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-100%);
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.sidebar-title {
+  padding-bottom: 1.5rem;
+  color: variables.$color-secondary;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-item {
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: variables.$color-text-light;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    opacity: 1;
+  }
+
+  .icon-container {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.15rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      margin: auto;
+    }
+  }
+
+  .list-icon-container {
+    @extend .icon-container;
+    margin-left: auto;
+  }
+}

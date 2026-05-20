@@ -1,0 +1,27 @@
+@use '../../../styles/abstracts/variables';
+
+.alerts-list {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.loading {
+    padding: 2rem;
+    text-align: center;
+    color: variables.$color-text-neutral;
+  }
+
+  &.error {
+    padding: 2rem;
+    text-align: center;
+    color: variables.$color-declined;
+  }
+}

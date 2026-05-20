@@ -1,0 +1,53 @@
+@use '../../styles/abstracts/variables';
+
+.login-page {
+  height: 100vh;
+  display: flex;
+
+  .login-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    gap: 1rem;
+
+    .login-logo {
+      padding-bottom: 2rem;
+      width: 100%;
+    }
+
+    .login-title {
+      padding-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .login-form {
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .login-field {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
+      }
+
+      input {
+        padding: 0 0.5rem;
+        width: 14rem;
+        outline: none;
+      }
+    }
+
+    .error-message {
+      color: variables.$color-declined;
+    }
+
+    .register-button {
+      width: 10rem;
+      padding: 0 0.5rem;
+    }
+  }
+}

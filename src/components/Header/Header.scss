@@ -1,0 +1,72 @@
+@use '../../styles/abstracts/variables';
+
+.header {
+  height: 5rem;
+  display: flex;
+  padding: 0.5rem 3rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: variables.$color-text-primary;
+
+    @media (max-width: variables.$breakpoint-tablet) {
+      display: block;
+    }
+  }
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .header-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    user-select: none;
+    cursor: pointer;
+
+    .user-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      background-color: variables.$color-background-primary;
+      border: 1px solid variables.$color-border-highlight;
+      border-radius: 2px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      min-width: 8.5rem;
+      z-index: 100;
+      transition: border 0.2s ease;
+
+      &:hover {
+        border: 1px solid variables.$color-declined-dark;
+      }
+
+      .logout-btn {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background: none;
+        border: none;
+        text-align: center;
+        color: variables.$color-text-dark;
+        font-size: 0.875rem;
+        font-weight: 400;
+        border-radius: 2px;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: variables.$color-declined-dark;
+        }
+      }
+    }
+  }
+}

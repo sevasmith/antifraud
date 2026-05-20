@@ -1,0 +1,51 @@
+@use '../../styles/abstracts/variables';
+
+.reports-page {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.reports-sidebar {
+  width: 19.5rem;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: variables.$color-background-primary;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: fit-content;
+  }
+}
+
+.reports-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background-color: variables.$color-background-secondary;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reports-header {
+    padding: 1.5rem 0.5rem 1rem;
+    color: variables.$color-text-primary;
+    text-transform: uppercase;
+  }
+
+  .reports-detail-container {
+    min-height: 100%;
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 0 0.5rem;
+  }
+}

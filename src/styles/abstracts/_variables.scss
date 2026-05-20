@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #1c7fda;
+  --color-approved: #45d700;
+  --color-declined: #ff5858;
+}
+
+$color-background-primary: #ffffff;
+$color-background-secondary: #e9eff2;
+$color-background-light: #f9f9f9;
+$color-background-highlight: #eff6ff;
+$color-background-active: #fff0da;
+$color-background-neutral: #ededed;
+$color-text-dark: #000000;
+$color-text-neutral: #5a5a5a;
+$color-text-neutral-soft: #767676;
+$color-text-neutral-light: #b9b9b9;
+$color-text-light: #ffffff;
+$color-text-primary: #4e80d1;
+$color-text-secondary: #974f4f;
+$color-text-safe: #4caf50;
+$color-border-neutral: #e3e4e5;
+$color-border-dark: #b5b5b5;
+$color-border-highlight: #86b4e1;
+$color-border-highlight-soft: #bfc7eb;
+$color-card-warning: #ffb648;
+$color-card-safe: #e3f0c0;
+$color-primary: var(--color-primary);
+$color-secondary: #9bc1ff;
+$color-approved: var(--color-approved);
+$color-approved-dark: #4caf50;
+$color-declined: var(--color-declined);
+$color-declined-dark: #eb5e53;
+
+$breakpoint-desktop: 1200px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
+$font-primary:
+  DM Sans,
+  sans-serif;
