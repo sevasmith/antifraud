@@ -61,6 +61,9 @@ export default {
           from: 'public/favicon.png',
           to: 'favicon.png',
         },
+        {
+          from: 'public/_redirects',
+        },
       ],
     }),
   ],
